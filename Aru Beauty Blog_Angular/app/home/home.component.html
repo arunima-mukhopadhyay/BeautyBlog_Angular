@@ -1,0 +1,47 @@
+﻿<div class="col-md-6 col-md-offset-3">
+    <h1>Hi {{currentUser.firstName}}!</h1>
+    <p>You're logged in with Arunima's Beauty Blog!! Get the best tips of the town :)</p>
+    <h2 align="center">Beauty Blog</h2>
+    <p align="center">Get your beauty tips here</p>
+    <br>
+    <h3 align="center"> 1. Drink lots of fluid </h3>
+    <p style="text-align:center;">
+    <img src="https://ostelin.com.au/wp-content/uploads/2014/03/skinHydrated.jpg" height="200px" width="300px">
+ </p>
+    <p align="center">
+    Drink more water. Drinking at least 8 glasses a day will help rid the body and skin of toxins. Everyone will not agree that water consumption will improve skin… but it certainly can't hurt. Many people often report that by increasing their water intake, their skin has a more radiant glow.
+    </p>
+
+    <br>
+    <h3 align="center"> 2. Cleanse your skin </h3>
+    <p style="text-align:center;">
+    <img src="http://woodvalebodyandbeauty.com.au/wp-content/uploads/2017/10/cleansing-image-002.jpg" height="200px" width="300px">
+ </p>
+    <p align="center">
+    Find a good cleanser that your skin responds well to, and stick with it. You can use a deep pore cleansing lotion if you have dry skin or a face wash if your skin is acne-prone. It’s important to remove signs of dirt, grime and pollution every day. However, be careful not to cleanse too often. When you wash your face too often or use harsh cleansers, you tend to strip all your natural oils, which is not a great thing. Don’t wash your face more than two times a day; in fact, washing your face at night is most essential to remove makeup and sunscreen, which tends to clog pores.
+    </p>
+    <br>
+    <h3 align="center"> 3. Get proper beauty sleep of 8 hours </h3>
+    <p style="text-align:center;">
+    <img src="https://i0.wp.com/www.southernfriedscience.com/wp-content/uploads/2014/11/tumblr_mhtve7IzEG1qc4uvwo1_500.gif" height="200px" width="300px">
+ </p>
+    <p align="center">
+    Sleep makes you feel better, but its importance goes way beyond just boosting your mood or banishing under-eye circles. Adequate sleep is a key part of a healthy lifestyle, and can benefit your heart, weight, mind, and more.    </p>
+    <br>
+    <h3 align="center"> 4. Apply Sunscreen thoroughly before leaving the house  </h3>
+    <p style="text-align:center;">
+    <img src="https://www.americangirl.com/explore/articles/summer-skin-redux-hello-sunshine/img/girl-img.jpg" height="200px" width="300px">
+ </p>
+    <p align="center">
+    Use enough sunscreen. Most adults need at least one ounce of sunscreen, about the amount you can hold in your palm, to fully cover all exposed areas of your body. Rub the sunscreen thoroughly into your skin. Apply sunscreen to all bare skin.    </p>
+    <br>
+    
+    <h3>All registered users:</h3>
+    <ul>
+        <li *ngFor="let user of users">
+            {{user.username}} ({{user.firstName}} {{user.lastName}})
+            - <a (click)="deleteUser(user.id)">Delete</a>
+        </li>
+    </ul>
+    <p><a [routerLink]="['/login']">Logout</a></p>
+</div>
